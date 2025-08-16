@@ -9,7 +9,6 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        // dd(Hash::make('florasan_548#!'), bcrypt('florasan_548#!'));
         return view('dashboard.pages.login');
     }
 

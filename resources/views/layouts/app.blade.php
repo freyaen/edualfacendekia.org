@@ -255,8 +255,7 @@
                     <div class="col-lg-4">
                         <div class="call-support">
                             <p>{{ LanguageController::t('Kebutuhan Publikasi') }}: <a href="https://wa.me/628563541632"
-                                    target="_blank">+62
-                                    857-3287-7774</a></p>
+                                    target="_blank">+62 8563541632</a></p>
                         </div>
                     </div>
                 </div>
