@@ -250,7 +250,6 @@
                                                     <div class="modal_title mb-10">
                                                         <h2 class="m-0">{{$item->name}}</h2>
                                                         <div class="mt-1 mb-3 text-muted">
-                                                            <p class="mb-0">Penulis: {{$item->author ?? '-'}}</p>
                                                             <p>Ketersediaan: {{$item->stock}}</p>
                                                         </div>
                                                     </div>

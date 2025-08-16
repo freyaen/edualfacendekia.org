@@ -144,7 +144,6 @@
                                         <tr>
                                             <th>Tanggal</th>
                                             <th>No</th>
-                                            <th>Toko</th>
                                             <th>Customer</th>
                                             <th>Total</th>
                                             <th>Status</th>
@@ -159,9 +158,6 @@
                                             </td>
                                             <td>
                                                 {{$item->number}}
-                                            </td>
-                                            <td>
-                                                {{$item->store->name}}
                                             </td>
                                             <td>
                                                 {{$item->user->name}}
