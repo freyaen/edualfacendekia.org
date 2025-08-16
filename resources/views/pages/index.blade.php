@@ -192,7 +192,6 @@
                                     <figcaption class="product_content">
                                         <h4 class="product_name"><a>{{$item->name}}</a></h4>
                                         <div class="mt-1 mb-3 text-muted">
-                                            <p class="mb-0">Penulis: {{$item->author ?? '-'}}</p>
                                             <p>Ketersediaan: {{$item->stock}}</p>
                                         </div>
                                         <div class="price_box mt-2">
@@ -251,7 +250,7 @@
                                                         <h2 class="m-0">{{$item->name}}</h2>
                                                         <div class="mt-1 mb-3 text-muted">
                                                             <p>Ketersediaan: {{$item->stock}}</p>
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="modal_price mb-10">
