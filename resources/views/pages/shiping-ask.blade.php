@@ -58,32 +58,13 @@
                             data-parent="#accordion">
                             <div class="card-body text-center">
                                 <p>{{ LanguageController::t('Anda juga bisa langsung menelepon kami di nomor:') }}</p>
-                                <a href="tel:+6285732877774" class="btn btn-primary">
+                                <a href="tel:+628563541632" class="btn btn-primary">
                                     <i class="fa fa-phone"></i> +62 856-3541-632
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card card_dipult">
-                        <div class="card-header card_accor" id="headingThree">
-                            <button class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                {{ LanguageController::t('Hubungi via Instagram') }}
-                                <i class="fa fa-plus"></i>
-                                <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordion">
-                            <div class="card-body text-center">
-                                <p>{{ LanguageController::t('Ikuti dan hubungi kami di Instagram:') }}</p>
-                                <a href="https://instagram.com/florasan.id" target="_blank" class="btn btn-danger">
-                                    <i class="fa fa-instagram"></i> @florasan.id
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>

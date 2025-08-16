@@ -35,7 +35,10 @@ class LandingController extends Controller
             $productQuery->where('name', 'like', '%'.$data['keyword'].'%');
         }
 
-        $data['products'] = $productQuery->latest()->get();
+        $data['products'] = $productQuery->get();
+        $data['productsLatest'] = $productQuery->latest()->get()
+        ->take(3);
+        $data['blogs'] = Blog::latest()->get();
         $data['types'] = Type::latest()->get();
 
         return view('pages.index', compact('data'));

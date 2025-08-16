@@ -40,6 +40,7 @@
 </style>
 
 
+
 <!--slider area start-->
 <section class="slider_section">
     <div class="slider_area owl-carousel">
@@ -123,6 +124,148 @@
     </div>
 </div>
 <!--banner area end-->
+
+<!--product area start-->
+<div class="product_area  mb-95">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="product_header">
+                    <div class="section_title">
+                        <h2>{{ LanguageController::t('Terbitan Baru') }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="book1" role="tabpanel">
+                <div class="row justify-content-center">
+                    @foreach ($data['productsLatest'] as $item)
+                    <div class="col-md-3 mb-4">
+                        <div class="product_items">
+                            <article class="single_product">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <div class="primary_img"><img
+                                                src="{{ asset('storage/products/' . $item->images[0]->name) }}">
+                                        </div>
+                                        <div class="action_links">
+                                            <ul>
+                                                <li class="add_to_cart">
+                                                    <a href="#" title="{{ LanguageController::t('Add to cart') }}"
+                                                        onclick="event.preventDefault(); document.getElementById('add-to-cart-form-{{$item->uuid}}').submit();">
+                                                        <i class="icon-shopping-bag"></i>
+                                                    </a>
+                                                    <form id="add-to-cart-form-{{$item->uuid}}"
+                                                        action="{{ route('cart.add', $item->uuid) }}" method="POST"
+                                                        style="display: none;">
+                                                        @csrf
+                                                        <input type="hidden" name="qty" value="1">
+                                                    </form>
+                                                </li>
+                                                <li class="quick_button"><a href="#" data-bs-toggle="modal"
+                                                        data-bs-target="#modal_box_{{$item->uuid}}" title="{{ LanguageController::t('quick view') }}">
+                                                        <i class="icon-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <figcaption class="product_content">
+                                        <h4 class="product_name"><a>{{$item->name}}</a></h4>
+                                        <div class="mt-1 mb-3 text-muted">
+                                            <p>Ketersediaan: {{$item->stock}}</p>
+                                        </div>
+                                        <div class="price_box mt-2">
+                                            <span class="current_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- modal area start-->
+                    <div class="modal fade" id="modal_box_{{$item->uuid}}" tabindex="-1" role="dialog"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="icon-x"></i></span>
+                                </button>
+                                <div class="modal_body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                                <div class="modal_tab">
+                                                    <div class="tab-content product-details-large">
+                                                        @foreach ($item->images as $index => $image)
+                                                        <div class="tab-pane fade {{$index == 0 ? 'active' : ''}}"
+                                                            id="{{$image->uuid}}" role="tabpanel">
+                                                            <div class="modal_tab_img">
+                                                                <a href="#"><img
+                                                                        src="{{asset('storage/products/' . $image->name)}}"
+                                                                        alt=""></a>
+                                                            </div>
+                                                        </div>
+                                                        @endforeach
+                                                    </div>
+                                                    <div class="modal_tab_button">
+                                                        <ul class="nav product_navactive owl-carousel" role="tablist">
+                                                            @foreach ($item->images as $index => $image)
+                                                            <li>
+                                                                <a class="nav-link {{$index == 0 ? 'active' : ''}}"
+                                                                    data-bs-toggle="tab" href="#{{$image->uuid}}"
+                                                                    role="tab" aria-controls="{{$image->uuid}}"
+                                                                    aria-selected="false"><img
+                                                                        src="{{asset('storage/products/' . $image->name)}}"
+                                                                        alt=""></a>
+                                                            </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-12">
+                                                <div class="modal_right">
+                                                    <div class="modal_title mb-10">
+                                                        <h2 class="m-0">{{$item->name}}</h2>
+                                                        <div class="mt-1 mb-3 text-muted">
+                                                            <p>Ketersediaan: {{$item->stock}}</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal_price mb-10">
+                                                        <span class="new_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
+                                                    </div>
+                                                    <div class="modal_description mb-15">
+                                                        <p>{!! LanguageController::t($item->description)!!}</p>
+                                                    </div>
+                                                    <div class="variants_selects">
+                                                        <div class="modal_add_to_cart">
+                                                            <form action="{{ route('cart.add', $item->uuid) }}"
+                                                                method="POST">
+                                                                @csrf
+                                                                <input name="qty" min="1" max="100" step="1" value="1"
+                                                                    type="number">
+                                                                <button type="submit">{{ LanguageController::t('Tambah ke Keranjang') }}</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal area end-->
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--product area end-->
 
 <!--product area start-->
 <div class="product_area  mb-95">
