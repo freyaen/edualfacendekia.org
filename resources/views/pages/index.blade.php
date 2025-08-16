@@ -50,50 +50,8 @@
 </section>
 <!--slider area end-->
 
-<!--shipping area start-->
-<div class="shipping_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single_shipping">
-                    <div class="shipping_icone">
-                        <img src="assets/img/about/shipping1.png" alt="">
-                    </div>
-                    <div class="shipping_content">
-                        <h3>{{ LanguageController::t('Pengiriman Cepat') }}</h3>
-                        <p>{{ LanguageController::t('Pengeriman kami cepat & aman') }} <br> {{ LanguageController::t('jadi anda tidak perlu khawatir') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_shipping col_2">
-                    <div class="shipping_icone">
-                        <img src="assets/img/about/shipping2.png" alt="">
-                    </div>
-                    <div class="shipping_content">
-                        <h3>{{ LanguageController::t('Pembayaran Aman') }}</h3>
-                        <p>{{ LanguageController::t('Transaksi mudah & aman dengan berbagai') }} <br> {{ LanguageController::t('metode pembayaran terpercaya') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_shipping col_3">
-                    <div class="shipping_icone">
-                        <img src="assets/img/about/shipping3.png" alt="">
-                    </div>
-                    <div class="shipping_content">
-                        <h3>{{ LanguageController::t('Pelayanan Ramah') }}</h3>
-                        <p>{{ LanguageController::t('Hubungi kami jika ada pertanyaan') }} <br> {{ LanguageController::t('kami selalu siap membantu') }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--shipping area end-->
-
 <!--banner area start-->
-<div class="banner_area">
+<div class="banner_area mt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">

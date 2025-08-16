@@ -1,5 +1,5 @@
 (function () {
-  var primary = localStorage.getItem("primary") || "#1A4D07";
+  var primary = localStorage.getItem("primary") || "#0E345A";
   var secondary = localStorage.getItem("secondary") || "#FE6A49";
 
   window.RihoAdminConfig = {

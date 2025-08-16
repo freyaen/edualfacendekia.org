@@ -662,7 +662,7 @@ $(function () {
       label: "data3",
     },
     {
-      color: "#1A4D0733",
+      color: "#0E345A33",
       bars: { show: true, align: "center", barWidth: 0.25 },
       data: data4, 
       label: "data4",

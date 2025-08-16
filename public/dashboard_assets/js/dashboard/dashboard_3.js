@@ -358,7 +358,7 @@ var options = {
           {value : 2, itemStyle: { color:'#86909C'},},
           {value : 2.2, itemStyle: { color:'#FF8367'},},
           {value : 2.4, itemStyle: { color:'#FFAE1A'},},
-          {value : 3.4, itemStyle: { color:'#1A4D07'},},
+          {value : 3.4, itemStyle: { color:'#0E345A'},},
         ],
         coordinateSystem: 'polar',
         label: {
