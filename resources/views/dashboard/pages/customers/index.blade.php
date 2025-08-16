@@ -1,0 +1,111 @@
+@extends('dashboard.layouts.app')
+
+@section('content')
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-6">
+                <h4>Customer</h4>
+            </div>
+            <div class="col-6">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Dashboard</li>
+                    <li class="breadcrumb-item active">Customer</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Container-fluid starts-->
+<div class="container-fluid">
+    <div class="row size-column">
+        <div class="col-xxl-9 box-col-12">
+            <div class="col-xxl-12">
+                <div class="card recent-order">
+                    <div class="card-body">
+                        <h4 class="mb-3">Daftar Customer</h4>
+
+                        <div class="project-table table-responsive custom-scrollbar">
+                            <table class="order-table project-table w-100 mb-3">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>No. HP</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($data['customers'] as $customer)
+                                    <tr>
+                                        <td>{{ $customer->name }}</td>
+                                        <td>{{ $customer->email }}</td>
+                                        <td>{{ $customer->phone }}</td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <a href="{{ route('customers.edit', $customer->uuid) }}"
+                                                    class="btn btn-sm btn-warning" title="Edit">
+                                                    <i class="fa fa-pencil text-white"></i>
+                                                </a>
+
+                                                <button type="button" class="btn btn-sm btn-danger btn-delete"
+                                                    data-id="{{ $customer->uuid }}" title="Hapus">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+
+                                            <form id="form-delete-{{ $customer->uuid }}"
+                                                action="{{ route('customers.destroy', $customer->uuid) }}" method="POST"
+                                                style="display: none;">
+                                                @csrf
+                                                @method('DELETE')
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="4" class="text-center">Belum ada customer</td>
+                                    </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
+
+                            {{ $data['customers'] ->links('pagination::bootstrap-5') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('.btn-delete');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const customerId = this.getAttribute('data-id');
+
+                Swal.fire({
+                    title: 'Yakin ingin menghapus?',
+                    text: "Data customer akan dihapus permanen.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Ya, hapus!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById(`form-delete-${customerId}`).submit();
+                    }
+                });
+            });
+        });
+    });
+
+</script>
+@endpush
