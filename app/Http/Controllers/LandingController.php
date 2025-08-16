@@ -38,7 +38,6 @@ class LandingController extends Controller
         $data['products'] = $productQuery->get();
         $data['productsLatest'] = $productQuery->latest()->get()
         ->take(3);
-        $data['blogs'] = Blog::latest()->get();
         $data['types'] = Type::latest()->get();
 
         return view('pages.index', compact('data'));
