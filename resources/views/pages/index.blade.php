@@ -4,42 +4,81 @@
 
 @section('content')
 
+
+<style>
+    /* Biar teks terlihat jelas */
+    .slider_content h1,
+    .slider_content p,
+    .slider_content a,
+    .banner_content h2,
+    .banner_content h3,
+    .banner_content a {
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        color: #fff; /* pastikan kontras */
+    }
+
+    /* Samakan tinggi banner */
+    .single_banner {
+        height: 350px; /* bisa sesuaikan */
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .single_banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* biar rapi & tidak gepeng */
+    }
+
+    .banner_content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+    }
+</style>
+
+
 <!--slider area start-->
 <section class="slider_section">
     <div class="slider_area owl-carousel">
-        <div class="single_slider d-flex align-items-center" data-bgimg="assets/img/slider/slider1.jpg">
+        <div class="single_slider d-flex align-items-center" 
+             data-bgimg="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="slider_content">
-                            <h1>{{ LanguageController::t('TANAMAN LENGKAP') }}</h1>
-                            <p>{{ LanguageController::t('Berbagai jenis tanaman tersedia untuk semua kebutuhan Anda') }}</p>
+                            <h1>{{ LanguageController::t('KOLEKSI BUKU LENGKAP') }}</h1>
+                            <p>{{ LanguageController::t('Temukan berbagai buku dari berbagai genre untuk menambah wawasan dan inspirasi Anda') }}</p>
                             <a class="button" href="#shop">{{ LanguageController::t('Belanja Sekarang') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single_slider d-flex align-items-center" data-bgimg="assets/img/slider/slider2.jpg">
+        <div class="single_slider d-flex align-items-center" 
+             data-bgimg="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="slider_content">
                             <h1>{{ LanguageController::t('PENGIRIMAN CEPAT') }}</h1>
-                            <p>{{ LanguageController::t('Pesanan dikirim dengan cepat & aman sampai ke tangan Anda') }}</p>
+                            <p>{{ LanguageController::t('Buku favorit Anda dikirim dengan cepat & aman sampai ke rumah') }}</p>
                             <a class="button" href="#shop">{{ LanguageController::t('Belanja Sekarang') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="single_slider d-flex align-items-center" data-bgimg="assets/img/slider/slider3.jpg">
+        <div class="single_slider d-flex align-items-center" 
+             data-bgimg="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1600&q=80">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="slider_content">
                             <h1>{{ LanguageController::t('HARGA TERJANGKAU') }}</h1>
-                            <p>{{ LanguageController::t('Kualitas terbaik dengan harga ramah di kantong') }}</p>
+                            <p>{{ LanguageController::t('Buku berkualitas dengan harga ramah di kantong') }}</p>
                             <a class="button" href="#shop">{{ LanguageController::t('Belanja Sekarang') }}</a>
                         </div>
                     </div>
@@ -57,11 +96,12 @@
             <div class="col-lg-6 col-md-6">
                 <figure class="single_banner">
                     <div class="banner_thumb">
-                        <a href="#shop"><img src="assets/img/bg/banner1.jpg" alt=""></a>
+                        <a href="#shop">
+                           <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80" >
+                        </a>
                         <div class="banner_content">
-                            <h3>{{ LanguageController::t('Pilihan Tanaman Lengkap') }}</h3>
-                            <h2>{{ LanguageController::t('Cocok') }} <br> {{ LanguageController::t('Untuk Rumah Anda') }}</h2>
-                            <a href="#shop">{{ LanguageController::t('Belanja Sekarang') }}</a>
+                            <h3>{{ LanguageController::t('Pilihan Buku Lengkap') }}</h3>
+                            <h2>{{ LanguageController::t('Cocok') }} <br> {{ LanguageController::t('Untuk Semua Usia') }}</h2>
                         </div>
                     </div>
                 </figure>
@@ -69,11 +109,12 @@
             <div class="col-lg-6 col-md-6">
                 <figure class="single_banner">
                     <div class="banner_thumb">
-                        <a href="#shop"><img src="assets/img/bg/banner2.jpg" alt=""></a>
+                        <a href="#shop">
+                            <img src="https://images.unsplash.com/photo-1473755504818-b72b6dfdc226?auto=format&fit=crop&w=800&q=80" >
+                        </a>
                         <div class="banner_content">
-                            <h3>{{ LanguageController::t('Kirim Cepat & Aman') }}</h3>
-                            <h2>{{ LanguageController::t('Pesan') }} <br> {{ LanguageController::t('Kami Antar') }}</h2>
-                            <a href="#shop">{{ LanguageController::t('Belanja Sekarang') }}</a>
+                            <h3>{{ LanguageController::t('Koleksi Terbaru') }}</h3>
+                            <h2>{{ LanguageController::t('Dari Penulis') }} <br> {{ LanguageController::t('Terbaik') }}</h2>
                         </div>
                     </div>
                 </figure>
@@ -90,20 +131,20 @@
             <div class="col-12">
                 <div class="product_header">
                     <div class="section_title">
-                        <h2>{{ LanguageController::t('Produk Kita') }}</h2>
+                        <h2>{{ LanguageController::t('Koleksi Buku Kami') }}</h2>
                     </div>
                 </div>
             </div>
         </div>
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="plant1" role="tabpanel">
+            <div class="tab-pane fade show active" id="book1" role="tabpanel">
                 <div class="row justify-content-center">
                     <div class="col-md-12 mb-5">
                         <div class="search_container">
                             <form action="{{ route('index') }}" method="GET" class="mx-auto w-100">
                                 <div class="hover_category">
                                     <select class="select_option" name="type_uuid" id="type_uuid">
-                                        <option @if(!request('type_uuid')) selected @endif value="">{{ LanguageController::t('Semua Jenis Produk') }}
+                                        <option @if(!request('type_uuid')) selected @endif value="">{{ LanguageController::t('Semua Kategori Buku') }}
                                         </option>
                                         @foreach ($data['types'] as $item)
                                         <option @if(request('type_uuid')==$item->uuid) selected @endif
@@ -112,7 +153,7 @@
                                     </select>
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="{{ LanguageController::t('Cari produk...') }}" type="text" name="keyword"
+                                    <input placeholder="{{ LanguageController::t('Cari buku...') }}" type="text" name="keyword"
                                         value="{{ request('keyword') }}">
                                     <button type="submit"><i class="icon-search"></i></button>
                                 </div>
@@ -151,12 +192,11 @@
                                     <figcaption class="product_content">
                                         <h4 class="product_name"><a>{{$item->name}}</a></h4>
                                         <div class="mt-1 mb-3 text-muted">
-                                            <p class="mb-0">Ukuran: {{$item->volume . ' ' . $item->unit}}</p>
-                                            <p>Stok: {{$item->stock}}</p>
+                                            <p class="mb-0">Penulis: {{$item->author ?? '-'}}</p>
+                                            <p>Ketersediaan: {{$item->stock}}</p>
                                         </div>
                                         <div class="price_box mt-2">
-                                            <span
-                                                class="current_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
+                                            <span class="current_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -210,13 +250,12 @@
                                                     <div class="modal_title mb-10">
                                                         <h2 class="m-0">{{$item->name}}</h2>
                                                         <div class="mt-1 mb-3 text-muted">
-                                                            <p class="mb-0">Ukuran: {{$item->volume . ' ' . $item->unit}}</p>
-                                                            <p>Stok: {{$item->stock}}</p>
+                                                            <p class="mb-0">Penulis: {{$item->author ?? '-'}}</p>
+                                                            <p>Ketersediaan: {{$item->stock}}</p>
                                                         </div>
                                                     </div>
                                                     <div class="modal_price mb-10">
-                                                        <span
-                                                            class="new_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
+                                                        <span class="new_price">Rp{{number_format($item->price, 0, '.', '.')}}</span>
                                                     </div>
                                                     <div class="modal_description mb-15">
                                                         <p>{!! LanguageController::t($item->description)!!}</p>

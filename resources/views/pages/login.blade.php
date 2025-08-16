@@ -26,7 +26,7 @@
                     <input type="password" name="password">
                 </p>
                 <div class="d-flex justify-content-between mb-3">
-                    <a href="https://wa.me/6285732877774">{{ LanguageController::t('Lupa password? Hubungi Admin') }}</a>
+                    <a href="https://wa.me/628563541632">{{ LanguageController::t('Lupa password? Hubungi Admin') }}</a>
                     <a href="{{route('register')}}">{{ LanguageController::t('Belum punya akun? Daftar Sekarang') }}</a>
                 </div>
 

@@ -1017,19 +1017,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
-.logo img {
-  max-width: 150px;
-}
-@media only screen and (max-width: 767px) {
-  .logo img {
-    max-width: 120px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .logo img {
-    max-width: 99px;
-  }
-}
+
 
 .header_account-list {
   margin-right: 27px;

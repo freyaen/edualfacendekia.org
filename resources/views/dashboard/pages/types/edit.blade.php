@@ -48,7 +48,7 @@
 <script>
     document.getElementById('btn-submit').addEventListener('click', function () {
         Swal.fire({
-            title: 'Yakin update toko?',
+            title: 'Yakin update kategori?',
             text: "Perubahan akan disimpan.",
             icon: 'warning',
             showCancelButton: true,

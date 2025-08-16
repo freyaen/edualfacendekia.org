@@ -38,8 +38,8 @@
                             data-parent="#accordion">
                             <div class="card-body text-center">
                                 <p>{{ LanguageController::t('Silakan hubungi kami langsung melalui WhatsApp di:') }}</p>
-                                <a href="https://wa.me/6285732877774" target="_blank" class="btn btn-success">
-                                    <i class="fa fa-whatsapp"></i> +62 857-3287-7774
+                                <a href="https://wa.me/628563541632" target="_blank" class="btn btn-success">
+                                    <i class="fa fa-whatsapp"></i> +62 856-3541-632
                                 </a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                             <div class="card-body text-center">
                                 <p>{{ LanguageController::t('Anda juga bisa langsung menelepon kami di nomor:') }}</p>
                                 <a href="tel:+6285732877774" class="btn btn-primary">
-                                    <i class="fa fa-phone"></i> +62 857-3287-7774
+                                    <i class="fa fa-phone"></i> +62 856-3541-632
                                 </a>
                             </div>
                         </div>

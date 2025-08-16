@@ -126,9 +126,9 @@
                                 Instruksi Pembayaran</h5>
                                 <p>Silakan transfer pembayaran ke:</p>
                                 <div class="bank_details">
-                                    <p><strong>Bank:</strong> Bank Syariah Indonesia</p>
-                                    <p><strong>Nomor Rekening:</strong> 1030875083</p>
-                                    <p><strong>Atas Nama:</strong> Prawira Satya</p>
+                                    <p><strong>Bank:</strong> BCA</p>
+                                    <p><strong>Nomor Rekening:</strong> 7625112753</p>
+                                    <p><strong>Atas Nama:</strong> Freya Enggaryni</p>
                                     <p><strong>Jumlah:</strong>
                                         Rp{{ number_format($order->total_payment, 0, ',', '.') }}</p>
                                 </div>

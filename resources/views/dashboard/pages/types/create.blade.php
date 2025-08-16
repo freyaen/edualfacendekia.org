@@ -46,7 +46,7 @@
 <script>
     document.getElementById('btn-submit').addEventListener('click', function () {
         Swal.fire({
-            title: 'Yakin simpan toko?',
+            title: 'Yakin simpan kategori?',
             text: "Data yang dikirim akan disimpan permanen.",
             icon: 'warning',
             showCancelButton: true,

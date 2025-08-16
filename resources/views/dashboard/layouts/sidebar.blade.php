@@ -8,7 +8,7 @@ $role = Auth::user()->role;
     <!-- Logo Section -->
     <div class="logo-wrapper">
         <a href="index-2.html">
-            <img class="img-fluid" width="50" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo">
+            <img class="img-fluid" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo">
         </a>
         <div class="back-btn">
             <i class="fa fa-angle-left"></i>
@@ -18,7 +18,7 @@ $role = Auth::user()->role;
     <!-- Logo Icon (Mini Mode) -->
     <div class="logo-icon-wrapper">
         <a href="index-2.html">
-            <img class="img-fluid" width="50" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo Icon">
+            <img class="img-fluid" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo Icon">
         </a>
     </div>
 
@@ -32,7 +32,7 @@ $role = Auth::user()->role;
                 <!-- Back Button (Mobile) -->
                 <li class="back-btn">
                     <a href="index-2.html">
-                        <img class="img-fluid" width="50" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo Icon">
+                        <img class="img-fluid" src="{{ asset('assets/img/logo/logo.png') }}" alt="Logo Icon">
                     </a>
                     <div class="mobile-back text-end text-white">
                         <span>Back</span>
