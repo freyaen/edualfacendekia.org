@@ -251,6 +251,7 @@
                                                         <h2 class="m-0">{{$item->name}}</h2>
                                                         <div class="mt-1 mb-3 text-muted">
                                                             <p>Ketersediaan: {{$item->stock}}</p>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="modal_price mb-10">
