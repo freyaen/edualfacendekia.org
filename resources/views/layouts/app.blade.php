@@ -278,8 +278,8 @@
                         <div class="footer_menu">
                             <ul>
                                 <li><a href="contact.html">{{ LanguageController::t('Buka Setiap Hari') }}</a></li>
-                                <li><a href="contact.html">{{ LanguageController::t('Kecuali hari Jum\'at') }}</a></li>
-                                <li><a href="contact.html">{{ LanguageController::t('09:00 - 19:00') }}</a></li>
+                                <!-- <li><a href="contact.html">{{ LanguageController::t('Kecuali hari Jum\'at') }}</a></li> -->
+                                <li><a href="contact.html">{{ LanguageController::t('07:00 - 17:00') }}</a></li>
                             </ul>
                         </div>
                     </div>
